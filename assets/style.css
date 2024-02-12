@@ -1,0 +1,280 @@
+/* Basic Reset */
+
+body,
+h1,
+h2,
+h3,
+p,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+a:link {
+  text-decoration: none;
+}
+a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+a:active {
+  text-decoration: none;
+}
+
+:root {
+  font-size: 16px;
+  line-height: 1.6;
+  --primary-color: #333;
+  --secondary-color: #f4f4f4;
+  --background-color: #f4f4f4;
+  --border-color: #eaeaea;
+  --accent-color: #f1356d;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--primary-color);
+  background-color: var(--background-color);
+  padding: 20px;
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+  margin-top: 2em;
+  background: var(--secondary-color);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Header */
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.header h1 {
+  font-size: 24px;
+  color: var(--accent-color);
+}
+
+.header p {
+  font-style: italic;
+  color: var(--primary-color);
+}
+
+/* Section Titles */
+.section-title {
+  border-bottom: 2px solid var(--border-color);
+  padding-bottom: 5px;
+  margin: 40px 0 20px;
+  color: #333;
+  font-size: 20px;
+}
+
+/* Education, Experience, etc. */
+.section-item {
+  margin-bottom: 15px;
+}
+
+.section-item h3 {
+  font-size: 18px;
+  color: #000;
+}
+
+.section-item p {
+  margin: 5px 0;
+  font-size: 16px;
+}
+
+/* Publications & Awards */
+.publications ul,
+.awards ul {
+  padding-left: 20px;
+}
+
+.publications li,
+.awards li {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+/* Contact Information */
+.contact-info {
+  margin-top: 4em;
+}
+
+.contact-info p {
+  font-size: 16px;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 14px;
+  color: #aaa;
+}
+/* Navigation Bar */
+.navbar {
+  background-color: #333;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+  margin-bottom: 2em;
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add responsiveness - On small screens, display the navbar vertically instead of horizontally */
+@media screen and (max-width: 600px) {
+  .navbar a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+/* Profile Picture */
+.profile-pic {
+  float: left; /* Align picture to the left */
+  margin: 2em;
+  border-radius: 50%; /* Optional: makes the picture round */
+  border: 3px solid #ddd; /* Optional: adds a border around the picture */
+  width: 120px; /* Set picture size */
+  height: 120px; /* Set picture size */
+}
+
+.header-text {
+  overflow: hidden; /* Ensures text aligns properly with the floated image */
+}
+
+/* Adjustments for smaller screens */
+@media screen and (max-width: 600px) {
+  .profile-pic {
+    display: block; /* Stack the image above the text on small screens */
+    float: none;
+    margin: 0 auto 20px; /* Center the image above the text */
+  }
+}
+/* Clearfix for floated image */
+.profile-section:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media screen and (max-width: 600px) {
+  .profile-pic {
+    display: block;
+    margin: 0 auto 20px;
+    float: none;
+  }
+
+  .profile-section,
+  .contact-section {
+    text-align: center;
+  }
+}
+/* Project Card Styles */
+.projects-container {
+  margin-top: 2em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.project-card {
+  width: calc(33.333% - 20px);
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin-bottom: 20px;
+  transition: transform 0.2s;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-icon {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  opacity: 0.7;
+}
+
+.project-info {
+  padding: 15px;
+}
+
+.project-title {
+  margin: 0 0 10px 0;
+  font-size: 20px;
+}
+
+.project-description {
+  font-size: 16px;
+  color: #555;
+}
+
+@media (max-width: 768px) {
+  .project-card {
+    width: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 480px) {
+  .project-card {
+    width: 100%;
+  }
+}
+.project-header,
+.project-footer {
+  text-align: center;
+  padding: 20px;
+  background-color: var(--accent-color);
+  color: white;
+}
+
+.project-main {
+  padding: 20px;
+  max-width: 800px;
+  margin: auto;
+}
+
+.project-overview,
+.project-features,
+.project-technologies,
+.project-challenges,
+.project-outcomes {
+  background-color: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.project-image {
+  max-width: 50%; /* Ensures the image is not wider than its container */
+  height: auto; /* Maintains the aspect ratio */
+  display: block; /* Ensures the image does not inline */
+  margin: 20px auto; /* Centers the image */
+  border-radius: 8px; /* Optional: rounds the corners of the image */
+}
